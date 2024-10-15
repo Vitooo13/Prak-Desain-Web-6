@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaca Jakarta dengan WeatherAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            background-image: linear-gradient(to right,  #84a2da, #f0f8ff);        
+        }
+        h1{
+            justify-content: center;
+            display: flex;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .weather-info {
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            display: inline-block;
+            background-color: rgb(234, 239, 244);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .weather-info:hover{          
+            background-color: #81a2d8;
+            transform: translateY(-10px);
+        }
+        .forecast {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .day {
+            padding: 10px;
+            border: 1px solid #060000;
+            border-radius: 5px;
+            background-color: rgb(234, 239, 244);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .day:hover{
+            background-color: #81a2d8;
+            transform: translateY(-10px);
+        }
+        
+        @media (max-width: 1366px) {
+            html {
+                font-size: 75%;
+            }
+        }
+
+        @media (max-width: 758px){
+            html {
+                font-size: 62.5%;
+            }
+
+            .forecast {
+                padding: 0px 20px;
+                font-size: 10px;
+                display: block;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 55%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cuaca di Bogor</h1>
+    <div id="current-weather" class="weather-info">
+        <!-- Cuaca hari ini akan ditampilkan di sini -->
+    </div>
+
+    <h2>Ramalan Cuaca 7 Hari ke Depan</h2>
+    <div id="weather-forecast" class="forecast">
+        <!-- Ramalan cuaca akan ditampilkan di sini -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
